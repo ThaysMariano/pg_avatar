@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/aang-removebg-preview.png" type="image/x-icon">
+    <title>Avatar Wiki</title>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: rgb(178, 190, 255);
+            background-image: url(imgs/aang-removebg-preview.png);
+            
+        }
+        h1, h2, pre, p, th, td, li{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        p {
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+
+
+        ol {
+            font-size: 20px;
+        }
+
+        li {
+            font-size: 22px;
+        }
+
+
+        a:link {
+            color: rgb(0, 0, 0);
+        }
+
+        a:visited {
+            color: rgb(0, 0, 0);
+        }
+
+        a:active {
+            color: rgb(124, 40, 40);
+        }
+        header {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(8, 15, 122, 0.5);
+        }
+
+        th,
+        td {
+            height: 40px;
+            width: 600px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: normal;
+           
+        }
+
+        .thtdEp {
+            width: 230px;
+            height: 100px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        
+
+        .titulo {
+            background: linear-gradient(rgb(20, 3, 255), rgb(220, 221, 255));
+            width: 550px;
+            justify-content: center;
+            border-radius: 40px;
+            margin-bottom: 10px;
+            margin-top: 15px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .menu {
+            background: linear-gradient(rgb(255, 217, 3), rgb(255, 254, 210));
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+            
+        }
+
+        .infoGeral {
+            background: linear-gradient(rgba(33, 151, 9, 0.973), rgba(150, 255, 150, 0.89));
+            height: 160px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .info {
+            padding: 8px;
+            text-align: center;
+            font-size: 20px;
+            
+        }
+        #paginaDestinada{
+            font-size: 20px;
+             margin-bottom: 2px;
+        }
+
+        .bloco {
+            min-height: 600px
+        }
+
+        .Vermelho {
+            border: 1px solid;
+            background: rgba(252, 41, 41, 0.582);
+        }
+
+        .Amarelo {
+            border: 1px solid;
+            background: rgba(247, 243, 15, 0.541);
+        }
+
+        .Azul {
+            border: 1px solid;
+            background: rgba(73, 153, 219, 0.5);
+        }
+
+        .Verde {
+            border: 1px solid;
+            background: rgba(49, 225, 43, 0.5);
+        }
+
+        .containerA {
+            display: inline-block;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .ImagemGrupo {
+            display: inline-block;
+            width: 400px;
+            height: 420px;
+            background-color: red;
+
+
+        }
+
+        .listaGrupo {
+            display: inline-block;
+            width: 310px;
+            height: 260px;
+            margin-bottom: 25px;
+            background-color: rgb(254, 255, 206);
+            border-radius: 10px;
+            line-height: 28px;
+            border: 1px solid rgb(161, 108, 8);
+        }
+
+        .tituloLista {
+            font-size: 25px;
+        }
+
+        #tituloKorra {
+            line-height: 32px;
+        }
+
+        .imagemPersonagens {
+            width: 420px;
+            height: 240px;
+            border-radius: 10px;
+
+        }
+
+        .divisao {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+
+
+
+        .botaoTopo {
+            display: flex;
+            justify-content: right;
+            margin-right: 20px;
+            margin-bottom: 10px;
+
+        }
+
+        .voltarTopoDivs {
+            background: rgba(247, 247, 247, 0.3);
+            text-decoration: none;
+            border: 1px solid black;
+            height: 35px;
+            width: 170px;
+            border-radius: 50px;
+            font-size: 15px;
+        
+
+        }
+
+
+
+
+
+
+
+
+        .tabelaSeasons {
+            display: inline-block;
+            align-items: center;
+            font-size: 50px;
+            display: inline-block;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .paiEpisodios {
+            margin-top: 60px;
+            background-color: rgb(254, 255, 206);
+            display: inline-block;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .episodios,
+        .thtdEp {
+            border: solid rgb(161, 108, 8) 1px;
+            border-collapse: collapse;
+
+        }
+
+        .paiNetflix {
+            margin-top: 30px;
+            width: 500px;
+            height: 70px;
+            background-color: rgb(254, 255, 206);
+            border-radius: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+
+        .netflix {
+            padding: 20px;
+            font-size: 24px;
+            border: 1px solid rgb(202, 141, 8);
+            border-radius: 20px;
+        }
+
+
+        .paiNacoes {
+            width: 80%;
+            min-height: 500px;
+            background-color: rgba(166, 228, 166, 0);
+            border-radius: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+        }
+
+
+        .ar,
+        .agua,
+        .terra,
+        .fogo,
+        .republica {
+            display: flex;
+            display: inline-block;
+            width: 100%;
+            height: 170px;
+            margin-bottom: 3px;
+            border-radius: 50px;
+            background-color: rgb(245, 242, 56);
+        }
+
+        .agua {
+            background-color: rgb(59, 101, 240);
+        }
+
+        .terra {
+            background-color: rgb(34, 150, 34);
+        }
+
+        .fogo {
+            background-color: rgb(201, 48, 48);
+        }
+
+        .republica {
+            background-color: rgb(81, 149, 170);
+        }
+
+        .textoT,
+        .textoTRep {
+            display: inline-block;
+            width: 700px;
+            height: 80px;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        .textoTRep {
+            width: 550px;
+        }
+        .textoT::first-letter{
+            margin-left: 40px;
+        }
+        .textoTRep::first-letter{
+            margin-left: 40px;
+        }
+
+        .imagem {
+            height: 150px;
+            margin: 10px;
+            margin-right: 55px;
+            border-radius: 30px
+        }
+
+        
+
+        .ordemLeitura {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            background-color: rgba(202, 220, 202, 0);
+            width: 1150px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+        }
+
+        .listasDireita {
+            display: inline-block;
+            background-color: rgb(254, 255, 206);
+            width: 550px;
+            margin-right: 15px;
+            border-radius: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            line-height: 38px;
+        }
+
+
+        .listasEsquerda {
+            display: inline-block;
+            background-color: rgb(254, 255, 206);
+            width: 550px;
+            border-radius: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            line-height: 35px;
+        }
+
+        .menuBaixo {
+            height: 100px;
+            background: linear-gradient(rgb(255, 217, 3), rgb(255, 254, 210));
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .textoBaixo {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .voltarTopo {
+            background-color: rgb(254, 255, 196);
+            text-decoration: none;
+            border: 1px solid black;
+            height: 40px;
+            width: 200px;
+            border-radius: 20px;
+
+        }
+
+        .irTopo {
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+      
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+            <h1>AVATAR WIKI</h1>
+        </div>
+    </header>
+
+
+    <div class="menu">
+        <table>
+            <thead>
+                <tr>
+                    <th>&#10072</th>
+                    <th> <a href="#bloco1"> Personagens Principais </a> </th>
+                    <th>&#10072</th>
+                    <th> <a href="#bloco2"> Episódios por Temporada </a> </th>
+                    <th>&#10072</th>
+                    <th><a href="#bloco3"> Nações </a></th>
+                    <th>&#10072</th>
+                    <th> <a href="#bloco4"> Livros </a> </th>
+                    <th>&#10072</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+
+    <div class="infoGeral">
+        <h1 id="paginaDestinada">Página destinada a informações sobre a série animada Avatar a Lenda de Aang e Avatar a Lenda de
+            Korra.</h1>
+        <p class="info">"Água, Terra, Fogo, Ar. Há muito tempo as nações viviam em paz e harmonia e aí tudo isso mudou
+            quando a Nação do Fogo atacou. Só o Avatar domina os quatro elementos e pode impedí-los."</p>
+        <p class="info"> "Terra, Fogo, Ar, Água. Só o Avatar pode dominar os quatro elementos e trazer o equilíbrio para
+            o mundo."</p>
+
+    </div>
+
+
+    <div class="bloco Vermelho" id="bloco1">
+        <h2>Personagens Principais</h2>
+        <div class="paiInfoAvatar">
+            <div class="containerA">
+                <div class="imagemGrupo">
+                    <img class="imagemPersonagens" src="imgs/gaang.jpg" alt="Imagem gaang do jogo Avatar">
+                    <img class="imagemPersonagens" src="imgs/aang_gif.gif" alt="Gif Aang fazendo dobra de ar com uma pedrinha">
+                </div>
+                <div class="listaGrupo">
+                    <ul>
+                        <p class="tituloLista">A Lenda de Aang</p>
+                        <li> Aang</li>
+                        <li> Katara</li>
+                        <li> Sokka</li>
+                        <li> Toph</li>
+                        <li> Zuko</li>
+                        <li> Suki</li>
+                        <li> Appa & Momo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="containerA">
+                <div class="imagemGrupo">
+                    <img class="imagemPersonagens" src="imgs/korra_imgdeitada.jpg" alt="Poster grupo da Korra">
+                    <img class="imagemPersonagens" src="imgs/korra_gif.gif" alt="Gif Korra usando dominação de fogo para assar um peixe">
+
+                </div>
+                <div class="listaGrupo">
+                    <ul id="tituloKorra">
+                        <p class="tituloLista"> A Lenda de Korra</p>
+                        <li> Korra</li>
+                        <li> Asami</li>
+                        <li> Bolin</li>
+                        <li> Mako</li>
+                        <li> Tenzin</li>
+                        <li> Naga & Pabu</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="botaoTopo">
+            <button class="voltarTopoDivs"><a class="irTopo" href='#top'>Voltar ao topo</a></button>
+        </div>
+    </div>
+
+
+    </div>
+
+    <div class="bloco Amarelo" id="bloco2">
+        <h2>Episódios por Temporada</h2>
+        <div class="tabelaSeasons">
+            <div class="paiEpisodios">
+                <table class="episodios">
+                    <thead>
+                        <th class="thtdEp">&#11214</th>
+                        <th class="thtdEp">T1</th>
+                        <th class="thtdEp">T2</th>
+                        <th class="thtdEp">T3</th>
+                        <th class="thtdEp">T4</th>
+                    </thead>
+                    <tbody>
+                        <th class="thtdEp">Aang</h>
+                        <td class="thtdEp">20</td>
+                        <td class="thtdEp">20</td>
+                        <td class="thtdEp">21</td>
+                        <td class="thtdEp">--</td>
+
+                    </tbody>
+                    <tfoot>
+                        <th class="thtdEp">Korra</th>
+                        <td class="thtdEp">12</td>
+                        <td class="thtdEp">14</td>
+                        <td class="thtdEp">13</td>
+                        <td class="thtdEp">13</td>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="paiNetflix">
+            <p class="netflix"> Disponível em: <a href="https://www.netflix.com/" target="_blank">Netflix</a> e <a href="https://www.paramountplus.com/" target="_blank">Paramount+</a></p>
+        </div>
+        <div class="botaoTopo">
+            <button class="voltarTopoDivs"><a class="irTopo" href='#top'>Voltar ao topo</a></button>
+        </div>
+    </div>
+
+
+    <div class="bloco Azul" id="bloco3">
+        <h2>Nações</h2>
+        <div class="paiNacoes">
+            <div class="ar">
+                <div class="paiImagemTexto">
+                    <div class="divisao">
+                        <img class="imagem" src="imgs/ar.PNG" alt="Ícone nação do ar">
+                        <p class="textoT">Os Nômades do Ar são um grupo pacífico e acolhedor. Para esse povo todo tipo
+                            de vida é sagrada, por isso em sua maioria são vegetarianos. Seu território é formado por
+                            três cadeias montanhosas espalhadas pelo Universo Avatar. Seu último Avatar do ciclo foi o
+                            Aang.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agua">
+                <div class="paiImagemTexto">
+                    <div class="divisao">
+                        <img class="imagem" src="imgs/agua.PNG" alt="Ícone nação do ar">
+                        <p class="textoT">A Tribo da Água é dividade em Sul e norte, se localizando nos polos do mundo.
+                             Há também a tribo do Pântano, dentro do Reino da Terra, os quais se adaptaram para dobrar a
+                              água dentro dos cipós. São inspirados na cultura indígena do ártico. Seu último Avatar do
+                            ciclo é a Korra. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terra">
+                <div class="paiImagemTexto">
+                    <div class="divisao">
+                        <img class="imagem" src="imgs/terra.PNG" alt="Ícone nação do ar">
+                        <p class="textoT">O Reino da Terra é o maior país no Mundo Avatar, tanto em população quanto em
+                            território. É um país diverso, abrigando diversas colônias da nação do fogo, como mostrado
+                            em avatar a Lenda de Aang. Seu último Avatar foi a Kyoshi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fogo">
+                <div class="paiImagemTexto">
+                    <div class="divisao">
+                        <img class="imagem" src="imgs/fogo.PNG" alt="Ícone nação do ar">
+                        <p class="textoT">A Nação do Fogo é uma monarquia absoluta liderada pelo Senhor do Fogo, vilão
+                            principal de Avatar a Lenda de Aang. Seu território é formado por ilhas vulcânicas muito
+                            próximas. Seu último Avatar do ciclo foi o Roku. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="republica">
+                <div class="paiImagemTexto">
+                    <div class="divisao">
+                        <img class="imagem" src="imgs/cidade_rep.jpeg" alt="Ícone nação do ar">
+                        <p class="textoTRep">Construída durante as HQ's de A Lenda de Aang e cenário principal da série A
+                            Lenda de Korra, Cidade Repúplica une moradores de todas as nações em harmonia. Fica localizada no Reino da Terra e é símbolo de paz e união.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="botaoTopo">
+            <button class="voltarTopoDivs"><a class="irTopo" href='#top'>Voltar ao topo</a></button>
+        </div>
+    </div>
+
+
+
+    <div class="bloco Verde" id="bloco4">
+        <h2>Livros</h2>
+        <div class="ordemLeitura ">
+            <div class="listasEsquerda">
+                <ol>
+                    <p> <strong>&#11214 Yangchen</strong></p>
+                    <li>The Down of Yangchen (Inglês)</li>
+                    <li>The Legacy of Yangchen (Inglês)</li>
+                </ol>
+                <ol>
+                    <p> <strong>&#11214 Kyoshi</strong></p>
+                    <li>A Ascensão de Kyoshi (Português)</li>
+                    <li>A Escuridão de Kyoshi (Português)</li>
+                </ol>
+                <ol>
+                    <p><strong>&#11214 Roku</strong> </p>
+                    <li>The Reckoning of Roku (Inglês)</li>
+                </ol>
+                <ol>
+                    <p> <strong>&#11214 Korra</strong></p>
+                    <li>Guerra Territorial (Português)</li>
+                    <li>Ruins of the Empire (Inglês)</li>
+                    <li>Mystery of Penquan Island (Inglês)</li>
+                    <li>Patterns in Time (Inglês)</li>
+                </ol>
+            </div>
+            <div class="listasDireita">
+                <ol>
+                    <p><strong>&#11214 Aang</strong></p>
+                    <li>As Aventuras Perdidas (Português)</li>
+                    <li>Histórias do Time Avatar (Português)</li>
+                    <li>Katara and The Pirate's Silver (Inglês)</li>
+                    <li>Suki, Alone (Inglês)</li>
+                    <li>A Promessa (Português)</li>
+                    <li>A Busca (Português)</li>
+                    <li>Smoke and Shadow (Inglês)</li>
+                    <li>The Rift (Inglês)</li>
+                    <li>Toph Beifong's Metalbending Academy (Inglês)</li>
+                    <li>Azula in the Spirit Temple (Inglês)</li>
+                    <li>The Bounty Hunter and the Tea Brewer (Inglês)</li>
+                    <li>North and South (Inglês)</li>
+                    <li>Imbalance (Inglês)</li>
+                </ol>
+
+            </div>
+        </div>
+        <div class="botaoTopo">
+            <button class="voltarTopoDivs"><a class="irTopo" href='#top'>Voltar ao topo</a></button>
+        </div>
+    </div>
+
+    <div class="menuBaixo">
+        <p class="textoBaixo">Página desenvolvida por Thays Mariano.</p>
+        <p class="textoBaixo">Matéria de Análise e Desenvolvimento de Sistemas, Frontend I</p>
+        <button class="voltarTopo"><a class="irTopo" href="#top">Voltar ao topo</a></button>
+    </div>
+</body>
+
+</html>
